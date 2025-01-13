@@ -1,4 +1,4 @@
-class LL{
+public class LL{
     private Node head;
     private Node tail;
     private int size;
@@ -55,6 +55,8 @@ class LL{
                             // tail = node;
         
     }
+
+    //  Insert a node 
     public void insert(int value, int index){
         if(head == null){
             insertAtFirst(value);
@@ -73,6 +75,7 @@ class LL{
         size++;
     }
 
+    // Deleting a node at the begining
     public int deleteAtFirst(){
         int val = head.value;
         if(head==tail){
@@ -148,6 +151,36 @@ class LL{
         Node node = get(index);
         return node.value;
     }
+
+    // Merge two sorted LinkedLists, list1 and list2 are heads of LL1 and LL1 respectively
+    public static LL merge(LL first, LL second){
+
+        Node f = first.head;
+        Node s = second.head;
+
+        LL ans = new LL();
+
+        while(f != null && s != null){
+            if(f.value <= s.value){
+               ans.insertAtLast(f.value);
+                f = f.next;
+            }
+            else{
+                ans.insertAtLast(s.value);
+                s = s.next;
+            }
+        }
+        while(f != null){
+            ans.insertAtLast(f.value);
+            f = f.next;
+        }
+        while(s != null){
+            ans.insertAtLast(s.value);
+            s = s.next;
+        }
+        return ans;
+    }
+
 
     // Function to display the linkedlist
     public void display(){

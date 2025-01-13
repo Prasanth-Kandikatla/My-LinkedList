@@ -4,19 +4,19 @@ class Main1{
 
         // Creating my linkedList and adding values into it
 
-        // LL list = new LL();
-        // list.insertAtFirst(1);
-        // list.insertAtFirst(2);
-        // list.insertAtLast(5);
-        // list.insert(24,2);
-        // list.insert(10, 2);
-        // list.display();
-        // System.out.println(list.deleteAtFirst());
-        // list.display();
-        // list.delete(1);
-        // list.display();
-        // System.out.println(list.valueAt(1));
-        // list.display();
+        LL list = new LL();
+        list.insertAtLast(1);
+        list.insertAtLast(2);
+        list.insertAtLast(5);
+        
+        LL list1 = new LL();
+        list1.insertAtLast(1);
+        list1.insertAtLast(3);
+        list1.insertAtLast(4);
+
+        list.display();
+        LL ans = LL.merge(list, list1);
+        ans.display();
 
         // Creating my DLL and performing basic operations
 
@@ -33,12 +33,12 @@ class Main1{
 
 
         // Creating my CLL and performing basic operations
-        CLL list = new CLL();
-        list.addFirst(1);
-        list.addFirst(2);
-        list.addFirst(6);
-        list.delete(2);
-        list.display();
+        // CLL list = new CLL();
+        // list.addFirst(1);
+        // list.addFirst(2);
+        // list.addFirst(6);
+        // list.delete(2);
+        // list.display();
 
     }
 }
